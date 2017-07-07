@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var monk = require('monk');
 
 var app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 var db = monk('localhost/gameslocker');
 var games = db.get('games');
 
